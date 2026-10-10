@@ -1,1 +1,2 @@
-
+import Link from 'next/link';
+export default function ArticleCard({article}){return <article className="article-card"><Link href={`/articles/${article.slug}`} className="card-image"><img src={article.image} alt="" loading="lazy"/><span>{article.category}</span></Link><div className="article-card-body"><p className="eyebrow">{article.date} <span>·</span> {article.read}</p><h3><Link href={`/articles/${article.slug}`}>{article.title}</Link></h3><p>{article.excerpt}</p><Link className="read-link" href={`/articles/${article.slug}`}>Read the guide <span>→</span></Link></div></article>}
